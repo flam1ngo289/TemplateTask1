@@ -10,10 +10,13 @@ T mod(T a) {
 }
 
 template <typename T>
-std::vector<T> mod(std::vector<T>& a) {
-    for (auto& i : a)
-        i *= i;
-    return a;
+std::vector<T> mod(const std::vector<T>& a) {
+    std::vector<T> result;
+    result.reserve(a.size()); // Резервируем место в векторе для увеличения производительности
+    for (const auto& i : a) {
+        result.push_back(i * i);
+    }
+    return result;
 }
 
 int main()
