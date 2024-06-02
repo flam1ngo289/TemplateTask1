@@ -33,11 +33,11 @@ int main()
     std::for_each(vec.begin(), vec.end() - 1, [](const int& n) { std::cout << n << ", "; });
     std::cout << *(vec.end() - 1) << std::endl;
 
-    mod(vec);
+    std::vector<int> v = mod(vec);
 
     std::cout << "[OUT]: ";
-    std::for_each(vec.begin(), vec.end() - 1, [](const int& n) { std::cout << n << ", "; });
-    std::cout << *(vec.end() - 1) << std::endl;
+    std::for_each(v.begin(), v.end() - 1, [](const int& n) { std::cout << n << ", "; });
+    std::cout << *(v.end() - 1) << std::endl;
 
     return 0;
 }
